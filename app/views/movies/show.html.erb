@@ -1,0 +1,22 @@
+<h1><%= @movie.title %></h1>
+
+<h3>Year: </h3>
+<p>
+  <%= @movie.year %>
+</p>
+
+<h3>Duration: </h3>
+<p>
+  <%= @movie.duration %>
+</p>
+
+<h3>Description: </h3>
+<p>
+  <%= @movie.description %>
+</p>
+
+<img src="<%= @movie.image_url %>" alt="" />
+
+<hr>
+
+<a href="/movies">Go Back</a>

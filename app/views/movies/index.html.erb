@@ -1,0 +1,22 @@
+<h1>Movies</h1>
+
+<h3>
+  <a href="/movies/new_form">Add a New Movie</a>
+</h3>
+
+<hr>
+
+<% @movies.each do |movie| %>
+  <a href="/movies/<%=movie.id%>">
+      <%= movie.title %>
+  </a>
+  &emsp;
+  <a href="/movies/<%=movie.id%>/edit_form">
+      Edit Movie
+  </a>
+  &emsp;
+  <a href="/delete_movie/<%=movie.id%>">
+      Delete Movie
+  </a>
+  <hr>
+<% end %>

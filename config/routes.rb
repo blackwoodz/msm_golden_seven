@@ -18,4 +18,21 @@ Rails.application.routes.draw do
   get("/movies", {controller: "movies", action: "index"})
   get("/movies/:id", {controller: "movies", action: "show"})
 
+  # DIRECTORS : delete
+  get("/delete_director/:id", {controller: "directors", action: "destroy"})
+
+  # DIRECTORS : create
+  get("/directors/new_form", {controller: "directors", action: "new_form"})
+  get("/directors/create_row", {controller: "directors", action: "create_row"})
+
+  # DIRECTORS : update
+  get("/directors/:id/edit_form", {controller: "directors", action: "edit_form"})
+  get("/directors/update_director/:id", {controller: "directors", action: "update_row"})
+
+  # DIRECTORS : read
+  get("/directors", {controller: "directors", action: "index"})
+  get("/directors/:id", {controller: "directors", action: "show"})
+
+
+
 end

@@ -1,0 +1,31 @@
+<h1>Edit <%= @director.name%></h1>
+
+<form class="" action="/directors/update_director/<%= @director.id%>">
+  <div class="">
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name" placeholder="<%= @director.name%>" value="<%= @director.name%>">
+  </div>
+
+  <div class="">
+    <label for="dob">Date of Birth</label>
+    <input id="dob" type="text" name="dob" placeholder="<%= @director.dob%>" value="<%= @director.dob%>">
+  </div>
+
+  <div class="">
+    <label for="bio">Bio</label>
+    <textarea id="bio" type="text" name="bio" rows="12" cols="70"><%= @director.bio%></textarea>
+  </div>
+
+  <div class="">
+    <label for="image_url">Image URL</label>
+    <input id="image_url" type="text" name="image_url" placeholder="<%= @director.image_url%>" value="<%= @director.image_url%>">
+  </div>
+
+  <div class="">
+    <button type="submit" name="button">Submit</button>
+  </div>
+</form>
+
+<hr>
+
+<a href="/directors">Go Back</a>

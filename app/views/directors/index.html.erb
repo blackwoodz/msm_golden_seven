@@ -1,0 +1,22 @@
+<h1>Directors</h1>
+
+<h3>
+  <a href="/directors/new_form">Add a New Director</a>
+</h3>
+
+<hr>
+
+<% @directors.each do |director| %>
+  <a href="/directors/<%=director.id%>">
+      <%= director.name %>
+  </a>
+  &emsp;
+  <a href="/directors/<%=director.id%>/edit_form">
+      Edit Director
+  </a>
+  &emsp;
+  <a href="/delete_director/<%=director.id%>">
+      Delete Director
+  </a>
+  <hr>
+<% end %>

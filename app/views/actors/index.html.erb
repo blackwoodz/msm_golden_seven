@@ -1,0 +1,22 @@
+<h1>Actors</h1>
+
+<h3>
+  <a href="/actors/new_form">Add a New Actor</a>
+</h3>
+
+<hr>
+
+<% @actors.each do |actor| %>
+  <a href="/actors/<%=actor.id%>">
+      <%= actor.name %>
+  </a>
+  &emsp;
+  <a href="/actors/<%=actor.id%>/edit_form">
+      Edit Actor
+  </a>
+  &emsp;
+  <a href="/delete_actor/<%=actor.id%>">
+      Delete Actor
+  </a>
+  <hr>
+<% end %>

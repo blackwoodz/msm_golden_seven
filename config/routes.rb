@@ -33,6 +33,19 @@ Rails.application.routes.draw do
   get("/directors", {controller: "directors", action: "index"})
   get("/directors/:id", {controller: "directors", action: "show"})
 
+  # ACTORS : delete
+  get("/delete_actor/:id", {controller: "actors", action: "destroy"})
 
+  # ACTORS : create
+  get("/actors/new_form", {controller: "actors", action: "new_form"})
+  get("/actors/create_row", {controller: "actors", action: "create_row"})
+
+  # ACTORS : update
+  get("/actors/:id/edit_form", {controller: "actors", action: "edit_form"})
+  get("/actors/update_actor/:id", {controller: "actors", action: "update_row"})
+
+  # ACTORS : read
+  get("/actors", {controller: "actors", action: "index"})
+  get("/actors/:id", {controller: "actors", action: "show"})
 
 end

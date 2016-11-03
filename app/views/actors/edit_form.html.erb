@@ -1,0 +1,31 @@
+<h1>Edit <%= @actor.name%></h1>
+
+<form class="" action="/actors/update_actor/<%= @actor.id%>">
+  <div class="">
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name" placeholder="<%= @actor.name%>" value="<%= @actor.name%>">
+  </div>
+
+  <div class="">
+    <label for="dob">Date of Birth</label>
+    <input id="dob" type="text" name="dob" placeholder="<%= @actor.dob%>" value="<%= @actor.dob%>">
+  </div>
+
+  <div class="">
+    <label for="bio">Bio</label>
+    <textarea id="bio" type="text" name="bio" rows="12" cols="70"><%= @actor.bio%></textarea>
+  </div>
+
+  <div class="">
+    <label for="image_url">Image URL</label>
+    <input id="image_url" type="text" name="image_url" placeholder="<%= @actor.image_url%>" value="<%= @actor.image_url%>">
+  </div>
+
+  <div class="">
+    <button type="submit" name="button">Submit</button>
+  </div>
+</form>
+
+<hr>
+
+<a href="/actors">Go Back</a>
